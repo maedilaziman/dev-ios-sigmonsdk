@@ -15,49 +15,40 @@ https://www.youtube.com/watch?v=44bI5ev9ASk
 <li>Swift 5.0</li>
 </ul>
 <h2>How To Install</h2>
-<ul>
-<li>Alamofire</li>
-<li>AlamofireImage</li>
-<li>SnapKit</li>
-</ul>
+<br/>
+After donwload SigmonSDK.framework, please open your project and then add SigmonSDK.framework to your project like picture below.
+<br/>
+<img src="https://raw.githubusercontent.com/maedilaziman/dev-ios-sigmonsdk/master/Screenshots/IMG_01.png" width="200" />
+<br/>
+Once you have successfully add SigmonSDK.framework, select the project in the Project navigator, and then open the General tab, look at 'Frameworks, Libraries, and Embedded Content',
+<br/>
+please choose Embed Without Signing in the SigmonSDK.framework like picture below.
+<br/>
+<img src="https://raw.githubusercontent.com/maedilaziman/dev-ios-sigmonsdkp/master/Screenshots/IMG_02.png" width="200" />
+<br/>
+Select info.plist and add App Transport Security Settings until Privacy - Location When In Use Usage Description like picture below.
+<br/>
+<img src="https://raw.githubusercontent.com/maedilaziman/dev-ios-sigmonsdk/master/Screenshots/IMG_03.png" width="200" />
+<br/>
+You have successfully add SigmonSDK.framework to your project
 <h2>How To Use</h2>
-MVVM
-<h2>Support orientation</h2>
-Portrait and Landscape
-<h2>Has been test</h2>
-iPhone
-<ul>
-<li>iPhone 8</li>
-<li>iPhone 8+</li>
-<li>iPhone 11</li>
-<li>iPhone 11 Pro</li>
-<li>iPhone 11 Pro Max</li>
-<li>iPhone SE</li>
-</ul>
-iPad
-<ul>
-<li>iPad (7th generation)</li>
-<li>iPad Air (3rd generation)</li>
-<li>iPad Pro (9.7 inch)</li>
-<li>iPad Pro (11 inch)</li>
-<li>iPad Pro (12.9 inch)</li>
-</ul>
-<h2>Preview</h2>
-<h3>iPhone</h3>
 <br/>
-<img src="https://raw.githubusercontent.com/maedilaziman/tada_smallapp/master/Screenshots/IMG_01.png" width="300" />
-<img src="https://raw.githubusercontent.com/maedilaziman/tada_smallapp/master/Screenshots/IMG_02.png" width="300" />
-<img src="https://raw.githubusercontent.com/maedilaziman/tada_smallapp/master/Screenshots/IMG_03.png" width="600" />
-<img src="https://raw.githubusercontent.com/maedilaziman/tada_smallapp/master/Screenshots/IMG_04.png" width="300" />
-<img src="https://raw.githubusercontent.com/maedilaziman/tada_smallapp/master/Screenshots/IMG_05.png" width="600" />
-<img src="https://raw.githubusercontent.com/maedilaziman/tada_smallapp/master/Screenshots/IMG_06.png" width="300" />
-<img src="https://raw.githubusercontent.com/maedilaziman/tada_smallapp/master/Screenshots/IMG_07.png" width="600" />
-<img src="https://raw.githubusercontent.com/maedilaziman/tada_smallapp/master/Screenshots/IMG_08.png" width="300" />
-<h3>iPad</h3>
+Open your class UIViewController, then import SigmonSDK, in that class please implement protocol SMSDKMainSpeedTestComm like picture below.
 <br/>
-<img src="https://raw.githubusercontent.com/maedilaziman/tada_smallapp/master/Screenshots/IMG_IPAD_01.png" width="500" />
-<img src="https://raw.githubusercontent.com/maedilaziman/tada_smallapp/master/Screenshots/IMG_IPAD_02.png" width="500" />
-<img src="https://raw.githubusercontent.com/maedilaziman/tada_smallapp/master/Screenshots/IMG_IPAD_03.png" width="600" />
-<h2>Installation</h2>
-Clone this project and add to your project.
+<img src="https://raw.githubusercontent.com/maedilaziman/dev-ios-sigmonsdk/master/Screenshots/IMG_04.png" width="200" />
+<br/>
+Declare SMSDKMainSpeedTestUI and SMSDKMainSpeedTestMainUI class like picture below.
+<br/>
+<img src="https://raw.githubusercontent.com/maedilaziman/dev-ios-sigmonsdk/master/Screenshots/IMG_05.png" width="200" />
+<br/>
+Initialize SMSDKMainSpeedTestUI and SMSDKMainSpeedTestMainUI class like picture below.
+<br/>
+<img src="https://raw.githubusercontent.com/maedilaziman/dev-ios-sigmonsdk/master/Screenshots/IMG_06.png" width="200" />
+<br/>
+After you have initialize SMSDKMainSpeedTestUI and SMSDKMainSpeedTestMainUI class, you can add startSpeedTest() action in your event. Like picture below.
+startSpeedTest() method will return empty string if no error message.
+<br/>
+<img src="https://raw.githubusercontent.com/maedilaziman/dev-ios-sigmonsdk/master/Screenshots/IMG_07.png" width="200" />
+<br/>
+Note: before you access startSpeedTest() action, you have to initialize SMSDKMainSpeedTestUI and SMSDKMainSpeedTestMainUI class
 <br/>

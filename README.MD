@@ -1,13 +1,13 @@
 # About
 Sigmon SDK Development
-<br/>
 <!--
+<br/>
 <br/>
 To help you better understand how to install Sigmon SDK, please watch the video below
 <br/>
 https://www.youtube.com/watch?v=44bI5ev9ASk
--->
 </br>
+-->
 <br/>
 <h2>Requirements</h2>
 <ul>

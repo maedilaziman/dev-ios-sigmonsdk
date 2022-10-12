@@ -36,7 +36,7 @@ Open your UIViewController class, then import SigmonSDK, in that class please im
 <img src="https://raw.githubusercontent.com/maedilaziman/dev-ios-sigmonsdk/master/Screenshots/IMG_04.png" width="300" />
 <br/>
 /// This set credential key is mandatory, you can't fill empty credential key
-```
+```swift
 func setCredentialKey() -> String {
     return credentialKey
 }
@@ -45,7 +45,7 @@ func setCredentialKey() -> String {
 /// if successful then the value of data.success = true, 
 /// and if not then the value of data.success = false, and data.error will provide information
 /// about the error description
-```
+```swift
 func onCompleteSetCredentialKey(data: CredentialKeyData) {
     print("SDKTest_set_credential: \(data.success) ; Error: \(data.error)")
 }

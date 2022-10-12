@@ -34,8 +34,7 @@ You have successfully add SigmonSDK.framework to your project
 Open your UIViewController class, then import SigmonSDK, in that class please implement protocol SMSDKMainSpeedTestComm and SMSDKMainSpeedTestSetCredentialComm as shown below.
 <br/>
 <img src="https://raw.githubusercontent.com/maedilaziman/dev-ios-sigmonsdk/master/Screenshots/IMG_04.png" width="300" />
-<br/>
-/// This set credential key is mandatory, you can't fill empty credential key
+This set credential key is mandatory, you can't fill empty credential key
 <pre>
     <code>
 	func setCredentialKey() -> String {
@@ -43,10 +42,10 @@ Open your UIViewController class, then import SigmonSDK, in that class please im
 	}
    </code>
 </pre>
-/// Before you can test speed, SDK will return info whether set credential key was successful or not,
-/// if successful then the value of data.success = true, 
-/// and if not then the value of data.success = false, and data.error will provide information
-/// about the error description
+Before you can test speed, SDK will return info whether set credential key was successful or not,\n
+if successful then the value of data.success = true,\n 
+and if not then the value of data.success = false, and data.error will provide information\n
+about the error description
 <pre>
     <code>
 	func onCompleteSetCredentialKey(data: CredentialKeyData) {

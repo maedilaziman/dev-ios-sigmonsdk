@@ -36,6 +36,7 @@ Open your UIViewController class, then import SigmonSDK, in that class please im
 <img src="https://raw.githubusercontent.com/maedilaziman/dev-ios-sigmonsdk/master/Screenshots/IMG_04.png" width="300" />
 <br/>
 ```
+///
 func setCredentialKey() -> String {
     return credentialKey
 }

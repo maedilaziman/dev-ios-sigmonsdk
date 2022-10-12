@@ -31,9 +31,24 @@ Select info.plist and add App Transport Security Settings until Privacy - Locati
 You have successfully add SigmonSDK.framework to your project
 <h2>How To Use</h2>
 <br/>
-Open your UIViewController class, then import SigmonSDK, in that class please implement protocol SMSDKMainSpeedTestComm as shown below.
+Open your UIViewController class, then import SigmonSDK, in that class please implement protocol SMSDKMainSpeedTestComm and SMSDKMainSpeedTestSetCredentialComm as shown below.
 <br/>
 <img src="https://raw.githubusercontent.com/maedilaziman/dev-ios-sigmonsdk/master/Screenshots/IMG_04.png" width="300" />
+<br/>
+```
+/// This set credential key is mandatory, you can't fill empty credential key
+func setCredentialKey() -> String {
+    return credentialKey
+}
+
+/// Before you can test speed, SDK will return info whether set credential key was successful or not,
+/// if successful then the value of data.success = true, 
+/// and if not then the value of data.success = false, and data.error will provide information
+/// about the error description
+func onCompleteSetCredentialKey(data: CredentialKeyData) {
+    print("SDKTest_set_credential: \(data.success) ; Error: \(data.error)")
+}
+```
 <br/>
 Declare SMSDKMainSpeedTestUI and SMSDKMainSpeedTestMainUI classes as shown below.
 <br/>

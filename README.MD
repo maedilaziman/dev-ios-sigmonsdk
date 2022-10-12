@@ -1,9 +1,12 @@
 # About
-Sigmon SDK Development<br/>
+Sigmon SDK Development
+<br/>
+<!--
 <br/>
 To help you better understand how to install Sigmon SDK, please watch the video below
 <br/>
 https://www.youtube.com/watch?v=44bI5ev9ASk
+-->
 </br>
 <br/>
 <h2>Requirements</h2>
@@ -42,9 +45,9 @@ This set credential key is mandatory, you can't fill empty credential key
 	}
    </code>
 </pre>
-Before you can test speed, SDK will return info whether set credential key was successful or not,\n
-if successful then the value of data.success = true,\n 
-and if not then the value of data.success = false, and data.error will provide information\n
+Before you can test speed, SDK will return info whether set credential key was successful or not, 
+if successful then the value of data.success = true,  
+and if not then the value of data.success = false, and data.error will provide information 
 about the error description
 <pre>
     <code>

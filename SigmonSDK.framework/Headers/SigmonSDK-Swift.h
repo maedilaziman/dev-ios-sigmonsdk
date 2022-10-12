@@ -218,13 +218,6 @@ SWIFT_CLASS("_TtC9SigmonSDK11Base64Utils")
 
 
 
-SWIFT_CLASS("_TtC9SigmonSDK12CreateLogger")
-@interface CreateLogger : NSObject
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-- (void)printHelloLogger;
-@end
-
-
 
 
 
@@ -305,6 +298,13 @@ SWIFT_CLASS("_TtC9SigmonSDK15SessionDelegate")
 - (void)URLSession:(NSURLSession * _Nonnull)session task:(NSURLSessionTask * _Nonnull)task didFinishCollectingMetrics:(NSURLSessionTaskMetrics * _Nonnull)metrics;
 - (void)URLSession:(NSURLSession * _Nonnull)session task:(NSURLSessionTask * _Nonnull)task didCompleteWithError:(NSError * _Nullable)error;
 - (void)URLSession:(NSURLSession * _Nonnull)session taskIsWaitingForConnectivity:(NSURLSessionTask * _Nonnull)task SWIFT_AVAILABILITY(watchos,introduced=4.0) SWIFT_AVAILABILITY(tvos,introduced=11.0) SWIFT_AVAILABILITY(ios,introduced=11.0) SWIFT_AVAILABILITY(macos,introduced=10.13);
+@end
+
+
+SWIFT_CLASS("_TtC9SigmonSDK16TestCreateLogger")
+@interface TestCreateLogger : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (void)printHelloLogger;
 @end
 
 
@@ -541,13 +541,6 @@ SWIFT_CLASS("_TtC9SigmonSDK11Base64Utils")
 
 
 
-SWIFT_CLASS("_TtC9SigmonSDK12CreateLogger")
-@interface CreateLogger : NSObject
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-- (void)printHelloLogger;
-@end
-
-
 
 
 
@@ -628,6 +621,13 @@ SWIFT_CLASS("_TtC9SigmonSDK15SessionDelegate")
 - (void)URLSession:(NSURLSession * _Nonnull)session task:(NSURLSessionTask * _Nonnull)task didFinishCollectingMetrics:(NSURLSessionTaskMetrics * _Nonnull)metrics;
 - (void)URLSession:(NSURLSession * _Nonnull)session task:(NSURLSessionTask * _Nonnull)task didCompleteWithError:(NSError * _Nullable)error;
 - (void)URLSession:(NSURLSession * _Nonnull)session taskIsWaitingForConnectivity:(NSURLSessionTask * _Nonnull)task SWIFT_AVAILABILITY(watchos,introduced=4.0) SWIFT_AVAILABILITY(tvos,introduced=11.0) SWIFT_AVAILABILITY(ios,introduced=11.0) SWIFT_AVAILABILITY(macos,introduced=10.13);
+@end
+
+
+SWIFT_CLASS("_TtC9SigmonSDK16TestCreateLogger")
+@interface TestCreateLogger : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (void)printHelloLogger;
 @end
 
 

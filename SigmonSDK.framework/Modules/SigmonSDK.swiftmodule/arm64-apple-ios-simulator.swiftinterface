@@ -759,8 +759,10 @@ extension SigmonSDK.HMAC {
   public convenience init(key: Swift.String, variant: SigmonSDK.HMAC.Variant = .md5) throws
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class SMSDKMainSpeedTestUI : ObjectiveC.NSObject {
+  public var sdkSpeedTestSetCredentialComm: SigmonSDK.SMSDKMainSpeedTestSetCredentialComm!
   public var sdkSpeedTestComm: SigmonSDK.SMSDKMainSpeedTestComm!
   public func delegateComm(sdkSpeedTestComm: SigmonSDK.SMSDKMainSpeedTestComm)
+  public func delegateSetCredentialComm(sdkSpeedTestSetCredentialComm: SigmonSDK.SMSDKMainSpeedTestSetCredentialComm)
   @objc deinit
 }
 extension SigmonSDK.SMSDKMainSpeedTestUI : CoreLocation.CLLocationManagerDelegate {
@@ -810,6 +812,10 @@ public struct CBC : SigmonSDK.BlockMode {
   public let customBlockSize: Swift.Int?
   public init(iv: Swift.Array<Swift.UInt8>)
   public func worker(blockSize: Swift.Int, cipherOperation: @escaping SigmonSDK.CipherOperationOnBlock, encryptionOperation: @escaping SigmonSDK.CipherOperationOnBlock) throws -> SigmonSDK.CipherModeWorker
+}
+public protocol SMSDKMainSpeedTestSetCredentialComm {
+  func setCredentialKey() -> Swift.String
+  func onCompleteSetCredentialKey(data: SigmonSDK.CredentialKeyData)
 }
 public protocol SMSDKMainSpeedTestComm {
   func onErrorInitServer(error: Swift.String)
@@ -2166,7 +2172,7 @@ public class RSASignature {
   }
   @objc deinit
 }
-@_inheritsConvenienceInitializers @objc public class CreateLogger : ObjectiveC.NSObject {
+@_inheritsConvenienceInitializers @objc public class TestCreateLogger : ObjectiveC.NSObject {
   @objc override dynamic public init()
   @objc public func printHelloLogger()
   @objc deinit
@@ -2454,7 +2460,7 @@ extension SigmonSDK.AES : SigmonSDK.Cipher {
 }
 @_inheritsConvenienceInitializers @objc public class SMSDKMainSpeedTestMainUI : ObjectiveC.NSObject {
   @objc override dynamic public init()
-  public func mainSpeedTestUI(sdkSpeedTestComm: SigmonSDK.SMSDKMainSpeedTestComm) -> SigmonSDK.SMSDKMainSpeedTestUI
+  public func mainSpeedTestUI(sdkSpeedTestSetCredentialComm: SigmonSDK.SMSDKMainSpeedTestSetCredentialComm, sdkSpeedTestComm: SigmonSDK.SMSDKMainSpeedTestComm) -> SigmonSDK.SMSDKMainSpeedTestUI
   public func startSpeedTest() -> Swift.String
   @objc deinit
 }
@@ -2698,6 +2704,10 @@ public struct UploadMeasurementData {
 public struct ProgressMeasurementData {
   public var isComplete: Swift.Bool
   public var value: Swift.Int
+  public var error: Swift.String
+}
+public struct CredentialKeyData {
+  public var success: Swift.Bool
   public var error: Swift.String
 }
 @usableFromInline
